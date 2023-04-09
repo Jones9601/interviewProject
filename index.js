@@ -1,7 +1,4 @@
-/**
- * @format
- */
-
+/* eslint-disable no-console */
 import React, {useMemo, useEffect, useState} from 'react';
 import {AppRegistry, View} from 'react-native';
 import App from './src/App';
@@ -12,7 +9,13 @@ import i18n, {EN, translate} from '@i18n';
 import {observer} from 'mobx-react-lite';
 import {CoreText} from '@src/core-components';
 
+// Hi Devs, Comment Below 3 lines to see logs
+// console.log = () => {};
+// console.error = () => {};
+// console.warn = () => {};
+
 const Screen = observer(() => {
+  console.log('======>');
   const [showSplash, setShowSplash] = useState(true);
 
   useEffect(() => {
