@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 import React, {useMemo, useEffect, useState} from 'react';
-import {AppRegistry, View} from 'react-native';
+import {AppRegistry, Platform, View} from 'react-native';
 import App from './src/App';
 import {name as appName} from './app.json';
 import {ThemeProvider} from '@theme';
@@ -8,6 +8,7 @@ import {I18nextProvider} from 'react-i18next';
 import i18n, {EN, translate} from '@i18n';
 import {observer} from 'mobx-react-lite';
 import {CoreText} from '@src/core-components';
+import Config from 'react-native-config';
 
 // Hi Devs, Comment Below 3 lines to see logs
 // console.log = () => {};
@@ -15,13 +16,13 @@ import {CoreText} from '@src/core-components';
 // console.warn = () => {};
 
 const Screen = observer(() => {
-  console.log('======>');
   const [showSplash, setShowSplash] = useState(true);
 
   useEffect(() => {
     (async () => {
       translate.init({en: EN});
       setTimeout(() => {
+        console.log('======>', Platform.OS, Config.GOOGLE_MAPS_API_KEY);
         setShowSplash(false);
       }, 2000);
     })();
