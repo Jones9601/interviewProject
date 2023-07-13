@@ -88,14 +88,12 @@ const Register = (props: RegisterProps) => {
             ) : null}
             <View style={Styles.container} />
             <CoreButton
-              buttonLabel={'Add User'}
+              buttonLabel={
+                (userData._id ?? '') === '' ? 'Add User' : 'Update User'
+              }
               onPress={() => handleSubmit()}
               disabled={!(!errors.name && !errors.age)}
-              buttonBodyStyle={{
-                backgroundColor: color.defaultTheme.palette.primaryRed,
-                margin: 20,
-                paddingVertical: 10,
-              }}
+              buttonBodyStyle={Styles.btn}
             />
           </>
         )}

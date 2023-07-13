@@ -22,6 +22,11 @@ const Styles = StyleSheet.create({
   btnText: {
     color: '#fff',
   },
+  btn: {
+    backgroundColor: color.defaultTheme.palette.primaryRed,
+    margin: 20,
+    paddingVertical: 10,
+  },
   headerText: {
     marginLeft: 20,
   },
