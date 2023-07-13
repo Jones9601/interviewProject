@@ -56,7 +56,10 @@ const Home = (props: HomeProps) => {
       <View style={Styles.userDetailsContainer}>
         <CoreText textStyle={Styles.text}>{item.name}</CoreText>
         <View style={Styles.rowContainer}>
-          <CoreText onPress={() => {}} textStyle={Styles.text}>
+          <CoreText
+            onPress={() => goRegisterScreen(item)}
+            textStyle={Styles.text}
+          >
             {'Update'}
           </CoreText>
           <CoreText
