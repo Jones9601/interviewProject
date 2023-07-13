@@ -8,7 +8,6 @@ import {I18nextProvider} from 'react-i18next';
 import i18n, {EN, translate} from '@i18n';
 import {observer} from 'mobx-react-lite';
 import {CoreText} from '@src/core-components';
-import Config from 'react-native-config';
 
 // Hi Devs, Comment Below 3 lines to see logs
 // console.log = () => {};
@@ -22,7 +21,6 @@ const Screen = observer(() => {
     (async () => {
       translate.init({en: EN});
       setTimeout(() => {
-        console.log('======>', Platform.OS, Config.GOOGLE_MAPS_API_KEY);
         setShowSplash(false);
       }, 2000);
     })();

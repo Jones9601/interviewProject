@@ -6,24 +6,19 @@
  */
 
 import React from 'react';
-import {Image, SafeAreaView, View} from 'react-native';
-import {color} from '@theme';
-import {CoreIcon, CoreText} from './core-components';
-import {useTranslation} from 'react-i18next';
-import {svgImage, webpImage} from '@assets/images';
+import {SafeAreaView} from 'react-native';
+import {Styles} from './core-components/hoc/Hoc.styles';
+import {Root} from './navigation';
+import {Hoc, ProgressLoader} from './core-components';
+import {stores} from './core-stores';
 
 const App = () => {
-  const {t} = useTranslation();
-
   return (
-    <SafeAreaView style={{flex: 1}}>
-      <View
-        style={{flex: 1, backgroundColor: color.defaultTheme.palette.white}}
-      >
-        <CoreText>{t('base')}</CoreText>
-        <CoreIcon icon={svgImage} />
-        <Image source={webpImage} style={{width: 80, height: 80}} />
-      </View>
+    <SafeAreaView style={Styles.container}>
+      <Hoc>
+        <Root />
+      </Hoc>
+      {stores.loading && <ProgressLoader title={stores.getLoaderTitle} />}
     </SafeAreaView>
   );
 };

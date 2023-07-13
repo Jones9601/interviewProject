@@ -45,7 +45,7 @@
       "@core-components/*": ["./src/core-components/*"],
       "@modules/*": ["./src/modules/*"],
       "@core-services": ["./src/services/index"],
-      "@core-stores": ["src/stores/index"],
+      "@core-stores": ["src/modules/stores/index"],
       "@core-utils": ["./src/utils/index"],
       "@core-navigation/*": ["./src/navigation/*"],
       "@core-plugins": ["./src/plugins/index"],
