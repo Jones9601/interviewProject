@@ -5,7 +5,7 @@ import Config from 'react-native-config';
 export const updateUserData = (id: string, params: UserData): Promise<any> => {
   return Service.send({
     baseurl: Config.END_POINT ?? '',
-    method: ApiMethod.POST,
+    method: id === '' ? ApiMethod.POST : ApiMethod.PUT,
     url: `unicorns${id === '' ? '' : '/'}${id}`,
     obj: params,
   });
