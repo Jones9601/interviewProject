@@ -28,6 +28,8 @@ end
 target 'sciflare' do
   config = use_native_modules!
 
+  pod 'RNFBCrashlytics', :path => '../node_modules/@react-native-firebase/crashlytics'
+
   # Flags change depending on the env values.
   flags = get_default_flags()
 

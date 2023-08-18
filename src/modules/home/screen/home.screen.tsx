@@ -12,6 +12,7 @@ import {deleteUserData, getUserData} from '../services/home.services';
 import {UserData} from '@src/core-services/service.model';
 import {stores} from '@src/core-stores';
 import Styles from '../styles/home.styles';
+import crashlytics from '@react-native-firebase/crashlytics';
 
 export interface HomeProps {
   navigation: NavigationProp<ParamListBase>;
@@ -46,9 +47,12 @@ const Home = (props: HomeProps) => {
   );
 
   const goRegisterScreen = (item: UserData) => {
-    props.navigation.navigate('register', {
-      userData: item,
-    });
+    const value: any = undefined;
+    console.log('======= >', value.length);
+    // crashlytics().crash();
+    // props.navigation.navigate('register', {
+    //   userData: item,
+    // });
   };
 
   const userContainer = (item: UserData) => {
