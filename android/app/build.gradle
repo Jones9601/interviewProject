@@ -91,9 +91,9 @@ android {
 
     compileSdkVersion rootProject.ext.compileSdkVersion
 
-    namespace "com.mobileapp"
+    namespace "com.sciflare.sci"
     defaultConfig {
-        applicationId "com.mobileapp"
+        applicationId "com.sciflare.sci"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
