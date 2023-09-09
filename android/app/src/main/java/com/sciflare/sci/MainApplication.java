@@ -1,4 +1,4 @@
-package com.mobileapp;
+package com.sciflare.sci;
 
 import android.app.Application;
 import com.facebook.react.PackageList;
